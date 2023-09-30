@@ -11,7 +11,7 @@ import javax.jws.WebService;
 import domain.ApustuAnitza;
 import domain.Apustua;
 import domain.Event;
-//import domain.Booking;
+//import domain.Booking;   
 import domain.Question;
 import domain.Quote;
 import domain.Registered;
