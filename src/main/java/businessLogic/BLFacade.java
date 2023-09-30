@@ -28,7 +28,7 @@ import exceptions.QuoteAlreadyExist;
  */
 @WebService
 public interface BLFacade  {
-	  //HOLA
+	  //HOLAss
 
 	/**
 	 * This method creates a question for an event, with a question text and the minimum bet
