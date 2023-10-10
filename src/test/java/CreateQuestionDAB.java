@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -58,7 +60,7 @@ public class CreateQuestionDAB {
 			
 			
 			//verify the results
-			assertTrue(q!=null);
+			assertNotNull(q);
 			assertEquals(q.getQuestion(),queryText);
 			assertEquals(q.getBetMinimum(),betMinimum,0);
 			
@@ -72,7 +74,7 @@ public class CreateQuestionDAB {
 		   } catch (QuestionAlreadyExist e) {
 			// TODO Auto-generated catch block
 			// if the program goes to this point fail  
-			fail();
+			fail("No debería pasar");
 			} finally {
 				  //Remove the created objects in the database (cascade removing)   
 				testDA.open();
@@ -105,7 +107,7 @@ public class CreateQuestionDAB {
 				
 				
 				//verify the results
-				assertTrue(q==null);
+				assertNull(q);
 				
 				
 			   } catch (QuestionAlreadyExist e) {
@@ -143,7 +145,7 @@ public class CreateQuestionDAB {
 			
 			
 			//verify the results
-			assertTrue(q==null);
+			assertNull(q);
 			
 			
 			//q datubasean dago
