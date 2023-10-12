@@ -951,9 +951,9 @@ bets,net.bytebuddy.implementation.bind.annotation,Morph.Binder.RedirectionProxy.
 bets,net.bytebuddy.implementation.bind.annotation,Origin.Binder,180,0,24,0,27,0,16,0,4,0
 bets,exceptions,QuoteAlreadyExist,7,0,0,0,4,0,2,0,2,0
 bets,exceptions,EventNotFinished,7,0,0,0,4,0,2,0,2,0
-bets,exceptions,QuestionAlreadyExist,7,0,0,0,4,0,2,0,2,0
+bets,exceptions,QuestionAlreadyExist,3,4,0,0,2,2,1,1,1,1
 bets,exceptions,ApustuaAlreadyExist,7,0,0,0,4,0,2,0,2,0
-bets,exceptions,EventFinished,7,0,0,0,4,0,2,0,2,0
+bets,exceptions,EventFinished,3,4,0,0,2,2,1,1,1,1
 bets,javax.jdo.identity,IntIdentity,139,0,12,0,40,0,18,0,12,0
 bets,javax.jdo.identity,ShortIdentity,139,0,12,0,40,0,18,0,12,0
 bets,javax.jdo.identity,ByteIdentity,139,0,12,0,40,0,18,0,12,0
@@ -1009,16 +1009,16 @@ bets,com.toedter.components,JTitlePanel,98,0,4,0,0,0,4,0,2,0
 bets,com.toedter.components,GenericBeanInfo,106,0,11,0,0,0,9,0,2,0
 bets,domain,Apustua,65,15,6,0,22,7,14,2,11,2
 bets,domain,IntegerAdapter,14,0,2,0,4,0,4,0,3,0
-bets,domain,Transaction,58,15,0,0,18,6,12,1,12,1
+bets,domain,Transaction,57,15,0,0,18,6,12,1,12,1
 bets,domain,Sport,45,30,2,0,16,9,10,3,9,3
-bets,domain,Question,101,51,4,0,28,14,15,5,13,5
-bets,domain,Quote,120,23,10,0,34,8,20,2,15,2
+bets,domain,Question,101,51,4,0,27,14,15,5,13,5
+bets,domain,Quote,119,23,10,0,34,8,20,2,15,2
 bets,domain,Jarraitzailea,45,0,0,0,19,0,10,0,10,0
 bets,domain,Team,46,22,0,0,15,7,9,2,9,2
 bets,domain,Registered,152,77,2,0,53,23,34,4,33,4
-bets,domain,Event,84,112,8,4,32,30,17,12,13,10
-bets,domain,TeamRenderer,70,0,2,0,16,0,3,0,2,0
-bets,domain,ApustuAnitza,163,35,12,0,45,11,25,3,19,3
+bets,domain,Event,84,112,8,4,32,29,17,12,13,10
+bets,domain,TeamRenderer,69,0,2,0,17,0,3,0,2,0
+bets,domain,ApustuAnitza,163,35,12,0,42,11,25,3,19,3
 bets,net.bytebuddy.implementation.bytecode.assign.reference,GenericTypeAwareAssigner,56,0,12,0,10,0,8,0,2,0
 bets,net.bytebuddy.implementation.bytecode.assign.reference,GenericTypeAwareAssigner.IsAssignableToVisitor.OfNonGenericType,23,0,2,0,5,0,3,0,2,0
 bets,net.bytebuddy.implementation.bytecode.assign.reference,GenericTypeAwareAssigner.IsAssignableToVisitor,166,0,22,0,25,0,20,0,9,0
@@ -1037,41 +1037,41 @@ bets,net.bytebuddy.jar.asm.commons,ModuleHashesAttribute,157,0,8,0,40,0,8,0,4,0
 bets,net.bytebuddy.jar.asm.commons,MethodRemapper,372,0,32,0,73,0,35,0,19,0
 bets,net.bytebuddy.jar.asm.commons,ModuleRemapper,141,0,10,0,32,0,14,0,9,0
 bets,net.bytebuddy.jar.asm.commons,SignatureRemapper,184,0,2,0,50,0,19,0,18,0
-bets,gui,FindQuestionsGUI.new PropertyChangeListener() {...},263,0,12,0,39,0,8,0,2,0
+bets,gui,FindQuestionsGUI.new PropertyChangeListener() {...},259,0,12,0,38,0,8,0,2,0
 bets,gui,FindQuestionsGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,FindQuestionsGUI.new MouseAdapter() {...},117,0,4,0,17,0,4,0,2,0
+bets,gui,FindQuestionsGUI.new MouseAdapter() {...},117,0,4,0,16,0,4,0,2,0
 bets,gui,TaldeaJarraituGUI,250,0,0,0,44,0,2,0,2,0
 bets,gui,MainGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 bets,gui,MainGUI.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
-bets,gui,MainGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
-bets,gui,MainGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
+bets,gui,MainGUI.new ActionListener() {...},24,0,0,0,4,0,2,0,2,0
+bets,gui,MainGUI.new ActionListener() {...},24,0,0,0,4,0,2,0,2,0
 bets,gui,MainGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
-bets,gui,MainGUI.new ActionListener() {...},25,0,0,0,5,0,2,0,2,0
+bets,gui,MainGUI.new ActionListener() {...},24,0,0,0,5,0,2,0,2,0
 bets,gui,MainUserGUI,350,0,14,0,71,0,19,0,12,0
 bets,gui,FindQuestionsGUI,344,0,0,0,60,0,3,0,3,0
-bets,gui,CreateQuestionGUI,576,0,8,0,109,0,9,0,5,0
-bets,gui,TaldeaApostatuGUI,588,0,0,0,91,0,2,0,2,0
-bets,gui,CreateQuestionGUI.new PropertyChangeListener() {...},248,0,14,0,39,0,9,0,2,0
+bets,gui,CreateQuestionGUI,576,0,8,0,106,0,9,0,5,0
+bets,gui,TaldeaApostatuGUI,587,0,0,0,91,0,2,0,2,0
+bets,gui,CreateQuestionGUI.new PropertyChangeListener() {...},242,0,14,0,38,0,9,0,2,0
 bets,gui,CreateQuestionGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,CreateQuestionGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,MainGUI,301,0,16,0,65,0,21,0,13,0
 bets,gui,GertaerakSortuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,GertaerakSortuGUI.new PropertyChangeListener() {...},234,0,12,0,36,0,8,0,2,0
-bets,gui,GertaerakSortuGUI.new ActionListener() {...},118,0,6,0,21,0,5,0,2,0
-bets,gui,GertaeraEzabatuGUI,382,0,4,0,75,0,6,0,4,0
+bets,gui,GertaerakSortuGUI.new PropertyChangeListener() {...},228,0,12,0,35,0,8,0,2,0
+bets,gui,GertaerakSortuGUI.new ActionListener() {...},118,0,6,0,22,0,5,0,2,0
+bets,gui,GertaeraEzabatuGUI,382,0,4,0,73,0,6,0,4,0
 bets,gui,PopularGUI.new ActionListener() {...},30,0,0,0,5,0,2,0,2,0
 bets,gui,PopularGUI.new ActionListener() {...},21,0,0,0,5,0,2,0,2,0
 bets,gui,PopularGUI.new ListSelectionListener() {...},12,0,0,0,3,0,2,0,2,0
-bets,gui,PopularGUI.new ListSelectionListener() {...},84,0,6,0,14,0,5,0,2,0
-bets,gui,PopularGUI.new ListSelectionListener() {...},69,0,4,0,11,0,4,0,2,0
+bets,gui,PopularGUI.new ListSelectionListener() {...},84,0,6,0,15,0,5,0,2,0
+bets,gui,PopularGUI.new ListSelectionListener() {...},69,0,4,0,12,0,4,0,2,0
 bets,gui,KuotakIpiniGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,KuotakIpiniGUI.new ActionListener() {...},58,0,4,0,9,0,4,0,2,0
+bets,gui,KuotakIpiniGUI.new ActionListener() {...},57,0,4,0,10,0,4,0,2,0
 bets,gui,KuotakIpiniGUI.new ActionListener() {...},168,0,6,0,27,0,5,0,2,0
-bets,gui,KuotakIpiniGUI.new PropertyChangeListener() {...},249,0,14,0,41,0,9,0,2,0
-bets,gui,MugimenduakBistaratuGUI,557,0,10,0,96,0,8,0,3,0
+bets,gui,KuotakIpiniGUI.new PropertyChangeListener() {...},243,0,14,0,40,0,9,0,2,0
+bets,gui,MugimenduakBistaratuGUI,557,0,10,0,94,0,8,0,3,0
 bets,gui,GertaerakKopiatuGUI.new ActionListener() {...},19,0,0,0,4,0,2,0,2,0
 bets,gui,GertaerakKopiatuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,GertaerakKopiatuGUI.new ActionListener() {...},184,0,14,0,26,0,9,0,2,0
+bets,gui,GertaerakKopiatuGUI.new ActionListener() {...},183,0,14,0,26,0,9,0,2,0
 bets,gui,GertaerakKopiatuGUI.new ListSelectionListener() {...},17,0,0,0,4,0,2,0,2,0
 bets,gui,DestacadosGUI.new ActionListener() {...},22,0,0,0,5,0,2,0,2,0
 bets,gui,DestacadosGUI.new ActionListener() {...},84,0,2,0,16,0,3,0,2,0
@@ -1089,42 +1089,42 @@ bets,gui,RegisteredGUI.new ActionListener() {...},21,0,0,0,4,0,2,0,2,0
 bets,gui,RegisteredGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
 bets,gui,RegisteredGUI.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
 bets,gui,LoginGUI,297,0,0,0,51,0,1,0,1,0
-bets,gui,ApustuaEginGUI.new PropertyChangeListener() {...},270,0,16,0,45,0,10,0,2,0
-bets,gui,ApustuaEginGUI.new ActionListener() {...},42,0,2,0,6,0,3,0,2,0
+bets,gui,ApustuaEginGUI.new PropertyChangeListener() {...},264,0,16,0,46,0,10,0,2,0
+bets,gui,ApustuaEginGUI.new ActionListener() {...},41,0,2,0,6,0,3,0,2,0
 bets,gui,ApustuaEginGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,ApustuaEginGUI.new ActionListener() {...},170,0,6,0,28,0,5,0,2,0
+bets,gui,ApustuaEginGUI.new ActionListener() {...},168,0,6,0,29,0,5,0,2,0
 bets,gui,ApustuaEginGUI.new ActionListener() {...},53,0,4,0,10,0,4,0,2,0
-bets,gui,ApustuaEginGUI.new ActionListener() {...},129,0,10,0,20,0,7,0,2,0
+bets,gui,ApustuaEginGUI.new ActionListener() {...},128,0,10,0,21,0,7,0,2,0
 bets,gui,ApustuaEginGUI.new ActionListener() {...},42,0,0,0,9,0,2,0,2,0
-bets,gui,ApustuakEzabatuGUI,226,0,12,0,41,0,8,0,2,0
-bets,gui,EmaitzakIpiniGUI,474,0,4,0,90,0,6,0,4,0
+bets,gui,ApustuakEzabatuGUI,226,0,12,0,40,0,8,0,2,0
+bets,gui,EmaitzakIpiniGUI,474,0,4,0,88,0,6,0,4,0
 bets,gui,SugerenciasGUI.new ActionListener() {...},30,0,0,0,5,0,2,0,2,0
 bets,gui,SugerenciasGUI.new ActionListener() {...},21,0,0,0,5,0,2,0,2,0
-bets,gui,SugerenciasGUI.new ListSelectionListener() {...},69,0,4,0,11,0,4,0,2,0
-bets,gui,SugerenciasGUI.new ListSelectionListener() {...},84,0,6,0,14,0,5,0,2,0
+bets,gui,SugerenciasGUI.new ListSelectionListener() {...},69,0,4,0,12,0,4,0,2,0
+bets,gui,SugerenciasGUI.new ListSelectionListener() {...},84,0,6,0,15,0,5,0,2,0
 bets,gui,SugerenciasGUI.new ListSelectionListener() {...},12,0,0,0,3,0,2,0,2,0
-bets,gui,ApustuaEginGUI,896,0,6,0,158,0,7,0,4,0
+bets,gui,ApustuaEginGUI,896,0,6,0,156,0,7,0,4,0
 bets,gui,MainUserGUI.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
 bets,gui,MainUserGUI.new ActionListener() {...},19,0,0,0,5,0,2,0,2,0
 bets,gui,MainUserGUI.new ActionListener() {...},19,0,0,0,5,0,2,0,2,0
 bets,gui,MainUserGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
-bets,gui,MainUserGUI.new ActionListener() {...},25,0,0,0,5,0,2,0,2,0
-bets,gui,MainUserGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
-bets,gui,MainUserGUI.new ActionListener() {...},25,0,0,0,4,0,2,0,2,0
+bets,gui,MainUserGUI.new ActionListener() {...},24,0,0,0,5,0,2,0,2,0
+bets,gui,MainUserGUI.new ActionListener() {...},24,0,0,0,4,0,2,0,2,0
+bets,gui,MainUserGUI.new ActionListener() {...},24,0,0,0,4,0,2,0,2,0
 bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},53,0,4,0,10,0,4,0,2,0
-bets,gui,EmaitzakIpiniGUI.new PropertyChangeListener() {...},272,0,16,0,45,0,10,0,2,0
-bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},61,0,6,0,11,0,5,0,2,0
-bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},84,0,6,0,17,0,5,0,2,0
+bets,gui,EmaitzakIpiniGUI.new PropertyChangeListener() {...},266,0,16,0,45,0,10,0,2,0
+bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},60,0,6,0,11,0,5,0,2,0
+bets,gui,EmaitzakIpiniGUI.new ActionListener() {...},84,0,6,0,16,0,5,0,2,0
 bets,gui,TaldeaApostatuGUI.new ActionListener() {...},30,0,0,0,5,0,2,0,2,0
 bets,gui,TaldeaApostatuGUI.new ListSelectionListener() {...},12,0,0,0,3,0,2,0,2,0
 bets,gui,TaldeaApostatuGUI.new ActionListener() {...},21,0,0,0,5,0,2,0,2,0
-bets,gui,TaldeaApostatuGUI.new ListSelectionListener() {...},69,0,4,0,11,0,4,0,2,0
-bets,gui,TaldeaApostatuGUI.new ListSelectionListener() {...},84,0,6,0,14,0,5,0,2,0
+bets,gui,TaldeaApostatuGUI.new ListSelectionListener() {...},69,0,4,0,12,0,4,0,2,0
+bets,gui,TaldeaApostatuGUI.new ListSelectionListener() {...},84,0,6,0,15,0,5,0,2,0
 bets,gui,DiruaSartuGUI.new ActionListener() {...},73,0,2,0,14,0,3,0,2,0
 bets,gui,DiruaSartuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,DestacadosGUI,384,0,2,0,66,0,3,0,2,0
-bets,gui,LoginGUI.new ActionListener() {...},119,0,10,0,25,0,7,0,2,0
+bets,gui,DestacadosGUI,383,0,2,0,67,0,3,0,2,0
+bets,gui,LoginGUI.new ActionListener() {...},119,0,10,0,26,0,7,0,2,0
 bets,gui,AdminGUI.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
 bets,gui,AdminGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
 bets,gui,AdminGUI.new ActionListener() {...},17,0,0,0,4,0,2,0,2,0
@@ -1142,24 +1142,24 @@ bets,gui,GertaerakKopiatuGUI,490,0,0,0,94,0,3,0,3,0
 bets,gui,JarraituGUI,351,0,2,0,63,0,3,0,2,0
 bets,gui,ApustuBerdinakGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,MugimenduakBistaratuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,GertaeraEzabatuGUI.new ActionListener() {...},89,0,6,0,16,0,5,0,2,0
-bets,gui,GertaeraEzabatuGUI.new PropertyChangeListener() {...},247,0,14,0,39,0,9,0,2,0
+bets,gui,GertaeraEzabatuGUI.new ActionListener() {...},89,0,6,0,17,0,5,0,2,0
+bets,gui,GertaeraEzabatuGUI.new PropertyChangeListener() {...},241,0,14,0,38,0,9,0,2,0
 bets,gui,GertaeraEzabatuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,GertaerakSortuGUI,490,0,4,0,91,0,6,0,4,0
+bets,gui,GertaerakSortuGUI,490,0,4,0,89,0,6,0,4,0
 bets,gui,GertaeraInfo.new ListSelectionListener() {...},21,0,0,0,4,0,2,0,2,0
 bets,gui,GertaeraInfo.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
-bets,gui,ApplicationLauncher,132,0,2,0,26,0,3,0,2,0
-bets,gui,KuotakIpiniGUI,559,0,4,0,105,0,6,0,4,0
+bets,gui,ApplicationLauncher,128,0,2,0,25,0,3,0,2,0
+bets,gui,KuotakIpiniGUI,559,0,4,0,103,0,6,0,4,0
 bets,gui,RegisterGUI,386,0,0,0,73,0,2,0,2,0
 bets,gui,AdminGUI,456,0,18,0,95,0,22,0,13,0
 bets,gui,ApustuBerdinakGUI,172,0,0,0,32,0,2,0,2,0
-bets,gui,JarraituGUI.new ActionListener() {...},161,0,6,0,22,0,5,0,2,0
+bets,gui,JarraituGUI.new ActionListener() {...},160,0,6,0,24,0,5,0,2,0
 bets,gui,JarraituGUI.new ActionListener() {...},22,0,0,0,4,0,2,0,2,0
 bets,gui,JarraituGUI.new ListSelectionListener() {...},27,0,2,0,6,0,3,0,2,0
 bets,gui,JarraituGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,ApustuakEzabatuGUI.new ActionListener() {...},11,0,0,0,3,0,2,0,2,0
 bets,gui,ApustuakEzabatuGUI.new ActionListener() {...},7,0,0,0,2,0,2,0,2,0
-bets,gui,ApustuakEzabatuGUI.new ActionListener() {...},105,0,12,0,18,0,8,0,2,0
+bets,gui,ApustuakEzabatuGUI.new ActionListener() {...},103,0,12,0,17,0,8,0,2,0
 bets,gui,RegisterGUI.new ActionListener() {...},137,0,8,0,29,0,6,0,2,0
 bets,gui,DiruaSartuGUI,217,0,0,0,40,0,2,0,2,0
 bets,gui,GertaeraInfo,459,0,6,0,84,0,5,0,2,0
@@ -1185,9 +1185,9 @@ bets,org.objenesis.instantiator.util,DefineClassHelper,23,0,2,0,2,0,3,0,2,0
 bets,org.objenesis.instantiator.util,ClassDefinitionUtils,114,0,2,0,19,0,5,0,4,0
 bets,org.objenesis.instantiator.util,DefineClassHelper.Java8,81,0,4,0,16,0,5,0,3,0
 bets,org.objenesis.instantiator.util,ClassUtils,32,0,0,0,8,0,4,0,4,0
-bets,dataAccess,ObjectdbManagerServer,192,0,2,0,43,0,3,0,2,0
-bets,dataAccess,DataAccess,1689,2045,99,7,352,454,87,7,35,6
-bets,dataAccess,ObjectdbManagerServer.new ActionListener() {...},48,0,0,0,12,0,2,0,2,0
+bets,dataAccess,ObjectdbManagerServer,189,0,2,0,41,0,3,0,2,0
+bets,dataAccess,DataAccess,1679,2049,98,8,341,455,86,8,35,6
+bets,dataAccess,ObjectdbManagerServer.new ActionListener() {...},47,0,0,0,10,0,2,0,2,0
 bets,javax.transaction.xa,XAException,13,0,0,0,7,0,3,0,3,0
 bets,net.bytebuddy.description.method,ParameterList.ForLoadedExecutable.Dispatcher.ForLegacyVm,31,0,0,0,5,0,4,0,4,0
 bets,net.bytebuddy.description.method,MethodDescription.Latent,110,0,2,0,35,0,13,0,12,0
@@ -1243,8 +1243,8 @@ bets,com.objectdb.jpa.type,TypeImpl,20,0,0,0,5,0,3,0,3,0
 bets,com.objectdb.jpa.type,ManagedTypeImpl,629,0,34,0,109,0,52,0,35,0
 bets,com.objectdb.jpa.type,IdentifiableTypeImpl,281,0,34,0,62,0,30,0,13,0
 bets,com.objectdb.jpa.type,EntityTypeImpl,19,0,0,0,7,0,5,0,5,0
-bets,configuration,UtilDate,97,32,0,0,27,6,4,1,4,1
-bets,configuration,ConfigXML,41,175,0,0,12,36,9,7,9,7
+bets,configuration,UtilDate,97,31,0,0,27,6,4,1,4,1
+bets,configuration,ConfigXML,40,172,0,0,11,36,9,7,9,7
 bets,org.objenesis.tck,TCK,230,0,16,0,55,0,16,0,8,0
 bets,org.objenesis.tck,Candidate,72,0,6,0,17,0,11,0,8,0
 bets,org.objenesis.tck,AbstractLoader.LoggingErrorHandler,18,0,0,0,5,0,2,0,2,0
@@ -3087,10 +3087,10 @@ bets,com.toedter.calendar.demo,JCalendarDemo.new PropertyChangeListener() {...},
 bets,com.toedter.calendar.demo,JCalendarDemo.new ActionListener() {...},28,0,0,0,0,0,2,0,2,0
 bets,com.toedter.calendar.demo,JCalendarDemo.new JPanel() {...},12,0,0,0,0,0,2,0,2,0
 bets,com.toedter.calendar.demo,DemoTable,48,0,2,0,0,0,2,0,1,0
-bets,businessLogic,BLFacadeImplementation,555,36,6,2,155,12,40,2,36,2
+bets,businessLogic,BLFacadeImplementation,547,44,6,2,155,13,40,2,36,2
 bets,businessLogic,BusinessLogicServer.new ActionListener() {...},14,0,0,0,4,0,2,0,2,0
 bets,businessLogic,BusinessLogicServer.new WindowAdapter() {...},9,0,0,0,3,0,2,0,2,0
-bets,businessLogic,BusinessLogicServer,233,0,4,0,48,0,4,0,2,0
+bets,businessLogic,BusinessLogicServer,229,0,4,0,47,0,4,0,2,0
 bets,javax.jdo.spi,RegisterClassEvent,34,0,0,0,12,0,6,0,6,0
 bets,javax.jdo.spi,JDOPermission,30,0,0,0,8,0,3,0,3,0
 bets,javax.jdo.spi,JDOImplHelper.new JDOImplHelper.StringConstructor() {...},25,0,0,0,6,0,2,0,2,0

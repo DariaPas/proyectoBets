@@ -31,8 +31,8 @@ public class Question implements Serializable {
 <span class="pc" id="L31">	private String result=null;  </span>
 	@XmlIDREF
 	private Event event;
-<span class="pc" id="L34">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Quote&gt; quotes=new Vector&lt;Quote&gt;();
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+<span class="pc" id="L35">	private Vector&lt;Quote&gt; quotes=new Vector&lt;Quote&gt;();</span>
 
 	public Question(){
 <span class="fc" id="L38">		super();</span>
@@ -185,7 +185,7 @@ public class Question implements Serializable {
 <span class="nc bnc" id="L185" title="All 2 branches missed.">			if(quo.getForecast().compareTo(forecast)==0) {</span>
 <span class="nc" id="L186">				return true;</span>
 			}
-<span class="nc" id="L188">		}</span>
+		}
 		
 <span class="nc" id="L190">		return false;</span>
 	}

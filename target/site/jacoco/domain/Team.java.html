@@ -18,10 +18,10 @@ public class Team implements Serializable{
 	@XmlID
 	@Id 
 	private String izena;
-<span class="pc" id="L21">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Registered&gt; users =new Vector&lt;Registered&gt;();
-<span class="pc" id="L23">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Event&gt; events =new Vector&lt;Event&gt;();
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+<span class="pc" id="L22">	private Vector&lt;Registered&gt; users =new Vector&lt;Registered&gt;();</span>
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+<span class="pc" id="L24">	private Vector&lt;Event&gt; events =new Vector&lt;Event&gt;();</span>
 	
 	public Team() {
 <span class="nc" id="L27">		super();</span>

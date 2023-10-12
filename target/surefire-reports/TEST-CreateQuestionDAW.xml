@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateQuestionDAW" time="0.116" tests="2" errors="1" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="CreateQuestionDAW" time="0.084" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -26,10 +26,10 @@
     <property name="user.variant" value=""/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="classworlds.conf" value="C:\Users\leire\Documents\UNI\TERCERO-UNI\WORKSPACE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4273975367380556641.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\leire\Documents\UNI\TERCERO-UNI\WORKSPACE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf10893818457895710760.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="C:\Users\leire\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/leire/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_20.0.2.v20230801-2057/jre/bin/server;C:/Users/leire/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_20.0.2.v20230801-2057/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\GNAT\2020\bin;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Wolfram Research\WolframScript\;C:\Program Files\GitHub CLI\;D:\AutoFirma\AutoFirma;D:\;C:\Users\leire\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\leire\GitHubDesktop\bin;C:\Users\leire\AppData\Local\GitHubDesktop\bin;;C:\Users\leire\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\leire\AppData\Roaming\npm;C:\WINDOWS\System32;;."/>
+    <property name="java.library.path" value="C:\Users\leire\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\leire\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin;C:/Users/leire/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_20.0.2.v20230801-2057/jre/bin/server;C:/Users/leire/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_20.0.2.v20230801-2057/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\GNAT\2020\bin;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Program Files\Wolfram Research\WolframScript\;C:\Program Files\GitHub CLI\;D:\AutoFirma\AutoFirma;D:\;C:\Users\leire\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\leire\GitHubDesktop\bin;C:\Users\leire\AppData\Local\GitHubDesktop\bin;;C:\Users\leire\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\leire\AppData\Roaming\npm;C:\WINDOWS\System32;;."/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="61.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -43,7 +43,7 @@
     <property name="java.class.path" value="C:\Users\leire\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.400.20230826-0755\jars\plexus-classworlds-2.7.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:report install sonar:sonar"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -Dstyle.color=always verify"/>
     <property name="java.home" value="C:\Users\leire\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -59,26 +59,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Temurin-17.0.7+7"/>
-    <property name="m2e.build.project.data.socket.port" value="48468"/>
+    <property name="m2e.build.project.data.socket.port" value="32513"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="test1" classname="CreateQuestionDAW" time="0.062">
-    <error message="Can&apos;t find bundle for base name Etiquetas, locale es_ES" type="java.util.MissingResourceException">java.util.MissingResourceException: Can't find bundle for base name Etiquetas, locale es_ES
-	at CreateQuestionDAW.test1(CreateQuestionDAW.java:57)
-</error>
-    <system-out><![CDATA[Creating DataAccess instance => isDatabaseLocal: true getDatabBaseOpenMode: initialize
-Opening DataAccess instance => isDatabaseLocal: true getDatabBaseOpenMode: initialize
-Creating TestDataAccess instance
-Opening TestDataAccess instance 
-Opening TestDataAccess instance 
->> DataAccessTest: addEvent
-DataBase closed
->> DataAccess: createQuestion=> event= 143;event1 question= query1 betMinimum=2.0
-Opening TestDataAccess instance 
->> DataAccessTest: removeEvent
-DataBase closed
-Finally true
-]]></system-out>
-  </testcase>
-  <testcase name="test2" classname="CreateQuestionDAW" time="0.054"/>
+  <testcase name="test1" classname="CreateQuestionDAW" time="0.003"/>
+  <testcase name="test2" classname="CreateQuestionDAW" time="0.081"/>
 </testsuite>

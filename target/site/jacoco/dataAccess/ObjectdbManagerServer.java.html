@@ -46,7 +46,7 @@ public class ObjectdbManagerServer extends JDialog {
 <span class="nc" id="L46">			dialog.setVisible(true);</span>
 <span class="nc" id="L47">		} catch (Exception e) {</span>
 <span class="nc" id="L48">			e.printStackTrace();</span>
-<span class="nc" id="L49">		}</span>
+		}
 <span class="nc" id="L50">	}</span>
 
 
@@ -80,12 +80,12 @@ public class ObjectdbManagerServer extends JDialog {
 							    	
 <span class="nc" id="L81">							    } catch (Exception ioe) {</span>
 <span class="nc" id="L82">							    	System.out.println (ioe);</span>
-<span class="nc" id="L83">							    }</span>
+							    }
 
 <span class="nc" id="L85">								System.exit(1);</span>
 							
 <span class="nc" id="L87">						} catch (Exception e1) {</span>
-<span class="nc" id="L88">						}</span>
+						}
 <span class="nc" id="L89">						System.exit(1);</span>
 <span class="nc" id="L90">					}</span>
 				});
@@ -104,7 +104,7 @@ public class ObjectdbManagerServer extends JDialog {
 		
 <span class="nc bnc" id="L105" title="All 2 branches missed.">		if (c.isDatabaseLocal()) {</span>
 <span class="nc" id="L106">			textArea.append(&quot;\nERROR, the database is configured as local&quot;);</span>
-		}
+<span class="nc" id="L107">		}</span>
 		else {
 		try{
 <span class="nc" id="L110">			System.out.println(&quot;Lauching objectdb server&quot;);</span>
@@ -114,7 +114,7 @@ public class ObjectdbManagerServer extends JDialog {
 <span class="nc" id="L114">		    	Runtime.getRuntime().exec(&quot;java -cp &quot;+objectDbpath+&quot; com.objectdb.Server -port &quot;+ c.getDatabasePort()+&quot; start&quot;);</span>
 <span class="nc" id="L115">		    } catch (Exception ioe) {</span>
 <span class="nc" id="L116">		    	System.out.println (ioe);</span>
-<span class="nc" id="L117">		    }</span>
+		    }
 
 <span class="nc" id="L119">		    textArea.append(&quot;\nAccess granted to: &quot;+c.getUser());</span>
 		    
@@ -123,7 +123,7 @@ public class ObjectdbManagerServer extends JDialog {
 <span class="nc" id="L123">		} catch (Exception e) {</span>
 <span class="nc" id="L124">			textArea.append(&quot;Something has happened in ObjectDbManagerServer: &quot;+e.toString());</span>
 
-<span class="nc" id="L126">		}</span>
+		}
 		
 		}
 <span class="nc" id="L129">	}</span>

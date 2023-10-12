@@ -29,16 +29,16 @@ public class RegisterGUI extends JFrame {
 	private JFrame thisw;
 	private JTextField txtBank;
 
-	public RegisterGUI()
-<span class="nc" id="L33">	{</span>
+<span class="nc" id="L32">	public RegisterGUI()</span>
+	{
 		try
 		{
 <span class="nc" id="L36">			jbInit();</span>
-		}
+<span class="nc" id="L37">		}</span>
 <span class="nc" id="L38">		catch(Exception e)</span>
 		{
 <span class="nc" id="L40">			e.printStackTrace();</span>
-<span class="nc" id="L41">		}</span>
+		}
 	
 <span class="nc" id="L43">	}</span>
 
@@ -127,7 +127,7 @@ public class RegisterGUI extends JFrame {
 <span class="nc" id="L127">					kontuaSartu.setVisible(true); </span>
 <span class="nc" id="L128">					kontuaSartu.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;BankAccountError&quot;)); </span>
 					
-				}else{
+<span class="nc" id="L130">				}else{</span>
 <span class="nc" id="L131">					izenaSartu.setVisible(false);</span>
 <span class="nc" id="L132">					passSartu.setVisible(false);</span>
 <span class="nc" id="L133">					kontuaSartu.setVisible(false);</span>
@@ -138,7 +138,7 @@ public class RegisterGUI extends JFrame {
 <span class="nc" id="L138">							businessLogic.storeRegistered(izena, password, i);</span>
 <span class="nc" id="L139">						}catch (NumberFormatException ex) {</span>
 <span class="nc" id="L140">							System.out.println(ex.getMessage());</span>
-<span class="nc" id="L141">						}</span>
+						}
 						
 <span class="nc" id="L143">						JFrame log= new LoginGUI();</span>
 <span class="nc" id="L144">						thisw.setVisible(false);</span>

@@ -31,8 +31,8 @@ public class LoginGUI extends JFrame{
 	private JLabel lblNewLabel_2;
 	private JButton btnNewButton;
 
-	public LoginGUI()
-<span class="nc" id="L35">	{</span>
+<span class="nc" id="L34">	public LoginGUI()</span>
+	{
 <span class="nc" id="L36">		thisw=this;</span>
 <span class="nc" id="L37">		getContentPane().setLayout(null);</span>
 <span class="nc" id="L38">		this.setSize(new Dimension(700, 500));</span>
@@ -98,7 +98,7 @@ public class LoginGUI extends JFrame{
 <span class="nc" id="L98">					passSartu.setVisible(true);</span>
 <span class="nc" id="L99">					passSartu.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;PasswordError&quot;)); </span>
 					
-				}else{
+<span class="nc" id="L101">				}else{</span>
 <span class="nc" id="L102">					izenaSartu.setVisible(false);</span>
 <span class="nc" id="L103">					passSartu.setVisible(false);</span>
 <span class="nc" id="L104">					Registered u = businessLogic.isLogin(izena, password);</span>
@@ -111,8 +111,8 @@ public class LoginGUI extends JFrame{
 <span class="nc" id="L111">							JFrame reg= new RegisteredGUI(u);</span>
 <span class="nc" id="L112">							reg.setVisible(true);</span>
 <span class="nc" id="L113">							thisw.setVisible(false);</span>
-<span class="nc" id="L114">						}</span>
-					}else { 
+						}
+<span class="nc" id="L115">					}else { </span>
 <span class="nc" id="L116">						izenaSartu.setVisible(true);</span>
 <span class="nc" id="L117">						izenaSartu.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;UsernameError2&quot;));</span>
 					}

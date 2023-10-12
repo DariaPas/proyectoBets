@@ -71,7 +71,7 @@ public class KuotakIpiniGUI extends JFrame{
 <span class="nc" id="L71">			jbInit(v);</span>
 <span class="nc" id="L72">		} catch (Exception e) {</span>
 <span class="nc" id="L73">			e.printStackTrace();</span>
-<span class="nc" id="L74">		}</span>
+		}
 <span class="nc" id="L75">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v) throws Exception {
@@ -164,7 +164,7 @@ public class KuotakIpiniGUI extends JFrame{
 				
 <span class="nc bnc" id="L165" title="All 2 branches missed.">				if(jComboBoxQuestions.getSelectedItem()!=null) {</span>
 <span class="nc" id="L166">					jButtonCreate.setEnabled(true);</span>
-				}else {
+<span class="nc" id="L167">				}else {</span>
 <span class="nc" id="L168">					jButtonCreate.setEnabled(false);</span>
 				}
 <span class="nc" id="L170">				}</span>
@@ -188,7 +188,7 @@ public class KuotakIpiniGUI extends JFrame{
 <span class="nc bnc" id="L188" title="All 2 branches missed.">				}else if(txtQuote.getText().isEmpty()) {</span>
 <span class="nc" id="L189">					jLabelErrorQuote.setVisible(true);</span>
 <span class="nc" id="L190">					jLabelErrorQuote.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;QuoteError&quot;));</span>
-				}else {
+<span class="nc" id="L191">				}else {</span>
 <span class="nc" id="L192">					String forecast = txtForecast.getText();</span>
 					try {
 <span class="nc" id="L194">						Double quote = Double.parseDouble(txtQuote.getText());</span>
@@ -201,15 +201,15 @@ public class KuotakIpiniGUI extends JFrame{
 								// TODO Auto-generated catch block
 <span class="nc" id="L202">								jLabelErrorForecast.setVisible(true);</span>
 <span class="nc" id="L203">								jLabelErrorForecast.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;QuoteExist&quot;));</span>
-<span class="nc" id="L204">							}</span>
-						}else {
+							}
+<span class="nc" id="L205">						}else {</span>
 <span class="nc" id="L206">							jLabelErrorQuote.setVisible(true);</span>
 <span class="nc" id="L207">							jLabelErrorQuote.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Quote&quot;) +&quot; &quot; + ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
 						}
 <span class="nc" id="L209">					} catch (NumberFormatException error){</span>
 <span class="nc" id="L210">						jLabelErrorQuote.setVisible(true);</span>
 <span class="nc" id="L211">						jLabelErrorQuote.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Quote&quot;) +&quot; &quot; + ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
-<span class="nc" id="L212">					}</span>
+					}
 					
 				}
 <span class="nc" id="L215">			}</span>
@@ -266,7 +266,7 @@ public class KuotakIpiniGUI extends JFrame{
 <span class="nc" id="L266">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
 <span class="nc" id="L267">							System.out.println(&quot;no events&quot;); </span>
 						
-						} else {
+<span class="nc" id="L269">						} else {</span>
 <span class="nc" id="L270">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
 <span class="nc" id="L271">									+ dateformat1.format(calendarAct.getTime()));</span>
 						}
@@ -275,7 +275,7 @@ public class KuotakIpiniGUI extends JFrame{
 
 <span class="nc bnc" id="L276" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
 <span class="nc" id="L277">							modelEvents.addElement(ev);</span>
-<span class="nc" id="L278">						}</span>
+						}
 <span class="nc" id="L279">						jComboBoxEvents.repaint();</span>
 						
 <span class="nc bnc" id="L281" title="All 2 branches missed.">						if (events.size() == 0)</span>
@@ -286,7 +286,7 @@ public class KuotakIpiniGUI extends JFrame{
 <span class="nc" id="L286">					} catch (Exception e1) {</span>
 
 <span class="nc" id="L288">						System.out.println(e1.getMessage());</span>
-<span class="nc" id="L289">					}</span>
+					}
 
 				}
 <span class="nc" id="L292">			}</span>
@@ -331,7 +331,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 <span class="nc" id="L331">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
 <span class="nc" id="L332">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
 <span class="nc" id="L333">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L334">	 	}</span>
+	 	}
 	 	
 <span class="nc" id="L336"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
 <span class="nc" id="L337">	 		calendar.set(Calendar.MONTH, month);</span>

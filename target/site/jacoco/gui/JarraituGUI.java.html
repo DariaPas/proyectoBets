@@ -70,24 +70,24 @@ public class JarraituGUI extends JFrame{
 <span class="nc bnc" id="L70" title="All 2 branches missed.">						if(((Registered)user).getUsername().equals(((Registered)list.getSelectedValue()).getUsername())){</span>
 <span class="nc" id="L71">							lblError.setVisible(true);</span>
 <span class="nc" id="L72">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituError2&quot;) + ((Registered)list.getSelectedValue()).getUsername());</span>
-						}else {
+<span class="nc" id="L73">						}else {</span>
 <span class="nc" id="L74">							b = businessLogic.jarraitu((Registered)user, (Registered)list.getSelectedValue(), zenb);</span>
 <span class="nc bnc" id="L75" title="All 2 branches missed.">							if(b) {</span>
 <span class="nc" id="L76">								lblError.setVisible(true);</span>
 <span class="nc" id="L77">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituCorrect&quot;) + ((Registered)list.getSelectedValue()).getUsername());</span>
-							}else {
+<span class="nc" id="L78">							}else {</span>
 <span class="nc" id="L79">								lblError.setVisible(true);</span>
 <span class="nc" id="L80">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;JarraituError&quot;));</span>
 							}
 						}
-					}else {
+<span class="nc" id="L83">					}else {</span>
 <span class="nc" id="L84">						lblError.setVisible(true); </span>
 <span class="nc" id="L85">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;)); </span>
 					}
 <span class="nc" id="L87">				}catch(NumberFormatException e1) {</span>
 <span class="nc" id="L88">					lblError.setVisible(true); </span>
 <span class="nc" id="L89">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
-<span class="nc" id="L90">				}</span>
+				}
 <span class="nc" id="L91">				btnInfo.setEnabled(false);</span>
 <span class="nc" id="L92">				btnSeguir.setEnabled(false);</span>
 <span class="nc" id="L93">			}</span>

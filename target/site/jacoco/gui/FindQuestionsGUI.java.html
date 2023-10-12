@@ -51,16 +51,16 @@ public class FindQuestionsGUI extends JFrame {
 
 	};
 
-	public FindQuestionsGUI()
-<span class="nc" id="L55">	{</span>
+<span class="nc" id="L54">	public FindQuestionsGUI()</span>
+	{
 		try
 		{
 <span class="nc" id="L58">			jbInit();</span>
-		}
+<span class="nc" id="L59">		}</span>
 <span class="nc" id="L60">		catch(Exception e)</span>
 		{
 <span class="nc" id="L62">			e.printStackTrace();</span>
-<span class="nc" id="L63">		}</span>
+		}
 <span class="nc" id="L64">	}</span>
 
 	
@@ -82,7 +82,7 @@ public class FindQuestionsGUI extends JFrame {
 <span class="nc" id="L82">		jButtonClose.setBounds(new Rectangle(274, 419, 130, 30));</span>
 
 <span class="nc" id="L84">		jButtonClose.addActionListener(new ActionListener()</span>
-<span class="nc" id="L85">		{</span>
+		{
 			public void actionPerformed(ActionEvent e)
 			{
 <span class="nc" id="L88">				jButton2_actionPerformed(e);</span>
@@ -100,14 +100,14 @@ public class FindQuestionsGUI extends JFrame {
 
 		// Code for JCalendar
 <span class="nc" id="L102">		this.jCalendar1.addPropertyChangeListener(new PropertyChangeListener()</span>
-<span class="nc" id="L103">		{</span>
+		{
 			public void propertyChange(PropertyChangeEvent propertychangeevent)
 			{
 
 <span class="nc bnc" id="L107" title="All 2 branches missed.">				if (propertychangeevent.getPropertyName().equals(&quot;locale&quot;))</span>
 				{
 <span class="nc" id="L109">					jCalendar1.setLocale((Locale) propertychangeevent.getNewValue());</span>
-				}
+<span class="nc" id="L110">				}</span>
 <span class="nc bnc" id="L111" title="All 2 branches missed.">				else if (propertychangeevent.getPropertyName().equals(&quot;calendar&quot;))</span>
 				{
 <span class="nc" id="L113">					calendarAnt = (Calendar) propertychangeevent.getOldValue();</span>
@@ -161,14 +161,14 @@ public class FindQuestionsGUI extends JFrame {
 <span class="nc" id="L161">							row.add(ev.getDescription());</span>
 <span class="nc" id="L162">							row.add(ev); // ev object added in order to obtain it with tableModelEvents.getValueAt(i,2)</span>
 <span class="nc" id="L163">							tableModelEvents.addRow(row);		</span>
-<span class="nc" id="L164">						}</span>
+						}
 <span class="nc" id="L165">						tableEvents.getColumnModel().getColumn(0).setPreferredWidth(25);</span>
 <span class="nc" id="L166">						tableEvents.getColumnModel().getColumn(1).setPreferredWidth(268);</span>
 <span class="nc" id="L167">						tableEvents.getColumnModel().removeColumn(tableEvents.getColumnModel().getColumn(2)); // not shown in JTable</span>
 <span class="nc" id="L168">					} catch (Exception e1) {</span>
 
 <span class="nc" id="L170">						jLabelQueries.setText(e1.getMessage());</span>
-<span class="nc" id="L171">					}</span>
+					}
 
 				}
 <span class="nc" id="L174">			} </span>
@@ -199,7 +199,7 @@ public class FindQuestionsGUI extends JFrame {
 <span class="nc" id="L199">					row.add(q.getQuestionNumber());</span>
 <span class="nc" id="L200">					row.add(q.getQuestion());</span>
 <span class="nc" id="L201">					tableModelQueries.addRow(row);	</span>
-<span class="nc" id="L202">				}</span>
+				}
 <span class="nc" id="L203">				tableQueries.getColumnModel().getColumn(0).setPreferredWidth(25);</span>
 <span class="nc" id="L204">				tableQueries.getColumnModel().getColumn(1).setPreferredWidth(268);</span>
 <span class="nc" id="L205">			}</span>

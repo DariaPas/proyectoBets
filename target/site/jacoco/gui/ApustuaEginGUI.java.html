@@ -100,7 +100,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L100">			jbInit(v, q);</span>
 <span class="nc" id="L101">		} catch (Exception e) {</span>
 <span class="nc" id="L102">			e.printStackTrace();</span>
-<span class="nc" id="L103">		}</span>
+		}
 <span class="nc" id="L104">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v, Quote q) throws Exception {
@@ -183,10 +183,10 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L183">				jComboBoxQuotes.removeAllItems();</span>
 <span class="nc bnc" id="L184" title="All 2 branches missed.">				for(domain.Quote quote : businessLogic.findQuote(q)) {</span>
 <span class="nc" id="L185">					modelQuotes.addElement(quote); </span>
-<span class="nc" id="L186">				}</span>
+				}
 <span class="nc bnc" id="L187" title="All 2 branches missed.">				if(modelQuotes.getSize()==0) {</span>
 <span class="nc" id="L188">					btnApustuaGehitu.setEnabled(false);</span>
-				}else {
+<span class="nc" id="L189">				}else {</span>
 <span class="nc" id="L190">					btnApustuaGehitu.setEnabled(true);</span>
 				}
 <span class="nc" id="L192">			}</span>
@@ -237,7 +237,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L237">								jButtonCreate.setVisible(false);</span>
 <span class="nc" id="L238">								textFieldDiruKop.setVisible(false);</span>
 								//jLabelDiruKopurua.setVisible(false);
-							}else {
+<span class="nc" id="L240">							}else {</span>
 <span class="nc" id="L241">								lblError.setVisible(true); </span>
 <span class="nc" id="L242">								lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError1&quot;)); </span>
 							}							
@@ -245,7 +245,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L245">							lblError.setVisible(true); </span>
 <span class="nc" id="L246">							lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError4&quot;)+ &quot; &quot; + maxMinBet); </span>
 						}
-					}else {
+<span class="nc" id="L248">					}else {</span>
 <span class="nc" id="L249">						lblError.setVisible(true); </span>
 <span class="nc" id="L250">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;)); </span>
 					}
@@ -253,7 +253,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L253">				}catch(NumberFormatException e1) {</span>
 <span class="nc" id="L254">					lblError.setVisible(true); </span>
 <span class="nc" id="L255">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorNumber&quot;));</span>
-<span class="nc" id="L256">				}</span>
+				}
 				
 <span class="nc" id="L258">			}</span>
 		});
@@ -310,7 +310,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc bnc" id="L310" title="All 2 branches missed.">						if(businessLogic.findQuestionFromQuote(quo).getQuestionNumber().equals(businessLogic.findQuestionFromQuote(q).getQuestionNumber())) {</span>
 <span class="nc" id="L311">							comp=true;</span>
 						}
-<span class="nc" id="L313">					}</span>
+					}
 <span class="nc bnc" id="L314" title="All 2 branches missed.">					if(!comp) {</span>
 <span class="nc" id="L315">						quoteList.addElement(q);</span>
 <span class="nc" id="L316">						quoteVec.add(q);</span>
@@ -319,11 +319,11 @@ public class ApustuaEginGUI extends JFrame{
 						}
 <span class="nc" id="L320">						jButtonFinish.setEnabled(true);</span>
 <span class="nc" id="L321">						lblError.setVisible(false);</span>
-					}else {
+<span class="nc" id="L322">					}else {</span>
 <span class="nc" id="L323">						lblError.setVisible(true);</span>
 <span class="nc" id="L324">						lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError2&quot;));</span>
 					}
-				}else {
+<span class="nc" id="L326">				}else {</span>
 <span class="nc" id="L327">					lblError.setVisible(true);</span>
 <span class="nc" id="L328">					lblError.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ApustuaError3&quot;));</span>
 				}
@@ -349,7 +349,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc bnc" id="L349" title="All 2 branches missed.">				if(modelQuotes.getSize()&gt;0) {</span>
 					
 <span class="nc" id="L351">					btnApustuaGehitu.setEnabled(true);</span>
-				}else {
+<span class="nc" id="L352">				}else {</span>
 					
 <span class="nc" id="L354">					btnApustuaGehitu.setEnabled(false);</span>
 				}
@@ -398,7 +398,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L398">									+ &quot;: &quot; + dateformat1.format(calendarAct.getTime()));</span>
 <span class="nc" id="L399">							System.out.println(&quot;no events&quot;); </span>
 						
-						} else {
+<span class="nc" id="L401">						} else {</span>
 <span class="nc" id="L402">							jLabelListOfEvents.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Events&quot;) + &quot;: &quot;</span>
 <span class="nc" id="L403">									+ dateformat1.format(calendarAct.getTime()));</span>
 						}
@@ -407,12 +407,12 @@ public class ApustuaEginGUI extends JFrame{
 
 <span class="nc bnc" id="L408" title="All 2 branches missed.">						for (domain.Event ev : events) {</span>
 <span class="nc" id="L409">							modelEvents.addElement(ev);</span>
-<span class="nc" id="L410">						}</span>
+						}
 <span class="nc" id="L411">						jComboBoxEvents.repaint();</span>
 						
 <span class="nc bnc" id="L413" title="All 2 branches missed.">						if (events.size() == 0) {</span>
 <span class="nc" id="L414">							btnApustuaGehitu.setEnabled(false);</span>
-						}else {
+<span class="nc" id="L415">						}else {</span>
 							
 <span class="nc" id="L417">							btnApustuaGehitu.setEnabled(true);</span>
 						}
@@ -420,7 +420,7 @@ public class ApustuaEginGUI extends JFrame{
 <span class="nc" id="L420">					} catch (Exception e1) {</span>
 
 <span class="nc" id="L422">						System.out.println(e1.getMessage());</span>
-<span class="nc" id="L423">					}</span>
+					}
 
 				}
 <span class="nc" id="L426">			}</span>
@@ -465,7 +465,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 <span class="nc" id="L465">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
 <span class="nc" id="L466">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
 <span class="nc" id="L467">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L468">	 	}</span>
+	 	}
 	 	
 <span class="nc" id="L470"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
 <span class="nc" id="L471">	 		calendar.set(Calendar.MONTH, month);</span>

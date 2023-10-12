@@ -59,12 +59,12 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc bnc" id="L59" title="All 2 branches missed.">					if(new Date().compareTo(businessLogic.findEventFromApustua(a).getEventDate())&gt;=0) {</span>
 <span class="nc" id="L60">						amaituta=true;</span>
 					}
-<span class="nc" id="L62">				}	</span>
+				}	
 <span class="nc bnc" id="L63" title="All 2 branches missed.">				if(!amaituta) {</span>
 <span class="nc" id="L64">					listApustuak.addElement(ap);</span>
 				}
 			}
-<span class="nc" id="L67">		}</span>
+		}
 <span class="nc" id="L68">		getContentPane().add(comboBox);</span>
 <span class="nc" id="L69">		comboBox.addActionListener(new ActionListener() {</span>
 			public void actionPerformed(ActionEvent e) {
@@ -85,7 +85,7 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc" id="L85">		jButtonEzabatu = new JButton(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;Ezabatu&quot;));</span>
 <span class="nc bnc" id="L86" title="All 2 branches missed.">		if(listApustuak.getSize()==0) {</span>
 <span class="nc" id="L87">			jButtonEzabatu.setEnabled(false); </span>
-		}else {
+<span class="nc" id="L88">		}else {</span>
 <span class="nc" id="L89">			jButtonEzabatu.setEnabled(true);</span>
 		}
 <span class="nc" id="L91">		jButtonEzabatu.addActionListener(new ActionListener() {</span>
@@ -102,15 +102,15 @@ public class ApustuakEzabatuGUI extends JFrame{
 <span class="nc bnc" id="L102" title="All 2 branches missed.">							if(new Date().compareTo(businessLogic.findEventFromApustua(a).getEventDate())&gt;=0) {</span>
 <span class="nc" id="L103">								amaituta=true;</span>
 							}
-<span class="nc" id="L105">						}	</span>
+						}	
 <span class="nc bnc" id="L106" title="All 2 branches missed.">						if(!amaituta) {</span>
 <span class="nc" id="L107">							listApustuak.addElement(ap);</span>
 						}
 					}
-<span class="nc" id="L110">				}</span>
+				}
 <span class="nc bnc" id="L111" title="All 2 branches missed.">				if(listApustuak.getSize()==0) {</span>
 <span class="nc" id="L112">					jButtonEzabatu.setEnabled(false); </span>
-				}else {
+<span class="nc" id="L113">				}else {</span>
 <span class="nc" id="L114">					jButtonEzabatu.setEnabled(true);</span>
 				}
 <span class="nc" id="L116">			}</span>

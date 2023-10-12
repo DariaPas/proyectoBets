@@ -18,8 +18,8 @@ public class Sport implements Serializable{
 	@XmlID
 	@Id 
 	private String izena;
-<span class="pc" id="L21">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Event&gt; events=new Vector&lt;Event&gt;();
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+<span class="pc" id="L22">	private Vector&lt;Event&gt; events=new Vector&lt;Event&gt;();</span>
 	
 	private Integer apustuKantitatea;
 	

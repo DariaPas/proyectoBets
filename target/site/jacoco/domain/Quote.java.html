@@ -28,8 +28,8 @@ public class Quote implements Serializable{
 	private Double balio;
 	@XmlIDREF
 	private Question question;
-<span class="pc" id="L31">	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)</span>
-	private Vector&lt;Apustua&gt; apustuak = new Vector&lt;Apustua&gt;(); 
+	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+<span class="pc" id="L32">	private Vector&lt;Apustua&gt; apustuak = new Vector&lt;Apustua&gt;(); </span>
 
 	public Quote() {
 <span class="nc" id="L35">		super();</span>

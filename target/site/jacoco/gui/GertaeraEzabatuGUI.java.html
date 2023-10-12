@@ -60,7 +60,7 @@ public class GertaeraEzabatuGUI extends JFrame{
 <span class="nc" id="L60">			jbInit(v);</span>
 <span class="nc" id="L61">		} catch (Exception e) {</span>
 <span class="nc" id="L62">			e.printStackTrace();</span>
-<span class="nc" id="L63">		}</span>
+		}
 <span class="nc" id="L64">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v) throws Exception {
@@ -119,19 +119,19 @@ public class GertaeraEzabatuGUI extends JFrame{
 <span class="nc" id="L119">				modelEvents.removeAllElements();</span>
 <span class="nc bnc" id="L120" title="All 2 branches missed.">				for(Event a : businessLogic.getEvents(event.getEventDate())){</span>
 <span class="nc" id="L121">					modelEvents.addElement(a); </span>
-<span class="nc" id="L122">				}</span>
+				}
 				
 <span class="nc bnc" id="L124" title="All 2 branches missed.">				if(b==false) {</span>
 <span class="nc" id="L125">					jLabelErrorea.setVisible(true);</span>
 <span class="nc" id="L126">					jLabelErrorea.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraEzabError&quot;));</span>
-				}else {
+<span class="nc" id="L127">				}else {</span>
 <span class="nc" id="L128">					jLabelErrorea.setVisible(true);</span>
 <span class="nc" id="L129">					jLabelErrorea.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraEzabCorrect&quot;)); </span>
 				}
 				
 <span class="nc bnc" id="L132" title="All 2 branches missed.">				if(modelEvents.getSize()==0) {</span>
 <span class="nc" id="L133">					jButtonEzabatu.setEnabled(false); </span>
-				}else {
+<span class="nc" id="L134">				}else {</span>
 <span class="nc" id="L135">					jButtonEzabatu.setEnabled(true);</span>
 				}
 <span class="nc" id="L137">			}</span>
@@ -205,7 +205,7 @@ public class GertaeraEzabatuGUI extends JFrame{
 
 <span class="nc" id="L206">					} catch (Exception e1) {</span>
 						
-<span class="nc" id="L208">					}</span>
+					}
 
 				}
 <span class="nc" id="L211">			}</span>
@@ -250,7 +250,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 <span class="nc" id="L250">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
 <span class="nc" id="L251">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
 <span class="nc" id="L252">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L253">	 	}</span>
+	 	}
 	 	
 <span class="nc" id="L255"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
 <span class="nc" id="L256">	 		calendar.set(Calendar.MONTH, month);</span>

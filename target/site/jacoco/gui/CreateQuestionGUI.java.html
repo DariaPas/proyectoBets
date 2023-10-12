@@ -49,7 +49,7 @@ public class CreateQuestionGUI extends JFrame {
 <span class="nc" id="L49">			jbInit(v);</span>
 <span class="nc" id="L50">		} catch (Exception e) {</span>
 <span class="nc" id="L51">			e.printStackTrace();</span>
-<span class="nc" id="L52">		}</span>
+		}
 <span class="nc" id="L53">	}</span>
 
 	private void jbInit(Vector&lt;domain.Event&gt; v) throws Exception {
@@ -181,7 +181,7 @@ public class CreateQuestionGUI extends JFrame {
 
 <span class="nc" id="L182">					} catch (Exception e1) {</span>
 <span class="nc" id="L183">						jLabelError.setText(e1.getMessage());</span>
-<span class="nc" id="L184">					}</span>
+					}
 
 				}
 <span class="nc" id="L187">			}</span>
@@ -226,7 +226,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 <span class="nc" id="L226">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
 <span class="nc" id="L227">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
 <span class="nc" id="L228">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L229">	 	}</span>
+	 	}
 	 	
 <span class="nc" id="L231"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
 <span class="nc" id="L232">	 		calendar.set(Calendar.MONTH, month);</span>
@@ -275,7 +275,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 
 <span class="nc" id="L276">			e1.printStackTrace();</span>
 
-<span class="nc" id="L278">		}</span>
+		}
 <span class="nc" id="L279">	}</span>
 
 	private void jButtonClose_actionPerformed(ActionEvent e) {

@@ -39,7 +39,7 @@ public class BLFacadeImplementation  implements BLFacade {
 <span class="nc bnc" id="L39" title="All 2 branches missed.">		if (c.getDataBaseOpenMode().equals(&quot;initialize&quot;)) {</span>
 <span class="nc" id="L40">		    dbManager=new DataAccess(c.getDataBaseOpenMode().equals(&quot;initialize&quot;));</span>
 <span class="nc" id="L41">		    dbManager.initializeDB();</span>
-		    } else
+<span class="nc" id="L42">		    } else</span>
 <span class="nc" id="L43">		     dbManager=new DataAccess();</span>
 <span class="nc" id="L44">		dbManager.close();</span>
 
@@ -80,7 +80,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		
 	    
 <span class="pc bpc" id="L82" title="1 of 2 branches missed.">		if(new Date().compareTo(event.getEventDate())&gt;0)</span>
-<span class="nc" id="L83">			throw new EventFinished(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorEventHasFinished&quot;));</span>
+<span class="fc" id="L83">			throw new EventFinished(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;ErrorEventHasFinished&quot;));</span>
 				
 		
 <span class="nc" id="L86">		 qry=dbManager.createQuestion(event,question,betMinimum);		</span>

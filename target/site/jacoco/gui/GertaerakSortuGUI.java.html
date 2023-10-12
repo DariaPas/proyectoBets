@@ -66,7 +66,7 @@ public class GertaerakSortuGUI extends JFrame{
 <span class="nc" id="L66">			jbInit();</span>
 <span class="nc" id="L67">		} catch (Exception e) {</span>
 <span class="nc" id="L68">			e.printStackTrace();</span>
-<span class="nc" id="L69">		}</span>
+		}
 <span class="nc" id="L70">	}</span>
 
 	private void jbInit() throws Exception {
@@ -146,19 +146,19 @@ public class GertaerakSortuGUI extends JFrame{
 <span class="nc bnc" id="L146" title="All 2 branches missed.">							if(businessLogic.gertaerakSortu(description, firstDay, sport)==false) {</span>
 <span class="nc" id="L147">								descriptionLabel.setVisible(true);</span>
 <span class="nc" id="L148">								descriptionLabel.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraSorError&quot;));</span>
-							}else {
+<span class="nc" id="L149">							}else {</span>
 <span class="nc" id="L150">								descriptionLabel.setVisible(true);</span>
 <span class="nc" id="L151">								descriptionLabel.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;GertaeraSorCorrect&quot;));</span>
 							}
 <span class="nc" id="L153">						} catch (EventFinished e1) {</span>
 <span class="nc" id="L154">							descriptionLabel.setVisible(true);</span>
 <span class="nc" id="L155">							descriptionLabel.setText(e1.getMessage());</span>
-<span class="nc" id="L156">						}</span>
+						}
 <span class="nc" id="L157">					}else {</span>
 <span class="nc" id="L158">						descriptionLabel.setVisible(true);</span>
 <span class="nc" id="L159">						descriptionLabel.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;SportError&quot;));</span>
 					}
-				}else {
+<span class="nc" id="L161">				}else {</span>
 <span class="nc" id="L162">					descriptionLabel.setVisible(true);</span>
 <span class="nc" id="L163">					descriptionLabel.setText(ResourceBundle.getBundle(&quot;Etiquetas&quot;).getString(&quot;DescriptionError&quot;));</span>
 				}
@@ -228,7 +228,7 @@ public class GertaerakSortuGUI extends JFrame{
 <span class="nc" id="L228">					} catch (Exception e1) {</span>
 
 <span class="nc" id="L230">						jLabelError.setText(e1.getMessage());</span>
-<span class="nc" id="L231">					}</span>
+					}
 
 				}
 				
@@ -275,7 +275,7 @@ public static void paintDaysWithEvents(JCalendar jCalendar,Vector&lt;Date&gt; da
 <span class="nc" id="L275">			Component o = (Component) jCalendar.getDayChooser().getDayPanel()</span>
 <span class="nc" id="L276">					.getComponent(calendar.get(Calendar.DAY_OF_MONTH) + offset);</span>
 <span class="nc" id="L277">			o.setBackground(Color.CYAN);</span>
-<span class="nc" id="L278">	 	}</span>
+	 	}
 	 	
 <span class="nc" id="L280"> 			calendar.set(Calendar.DAY_OF_MONTH, today);</span>
 <span class="nc" id="L281">	 		calendar.set(Calendar.MONTH, month);</span>

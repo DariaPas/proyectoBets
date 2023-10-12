@@ -44,7 +44,7 @@ public class BusinessLogicServer extends JDialog {
 <span class="nc" id="L44">			dialog.setVisible(true);</span>
 <span class="nc" id="L45">		} catch (Exception e) {</span>
 <span class="nc" id="L46">			e.printStackTrace();</span>
-<span class="nc" id="L47">		}</span>
+		}
 <span class="nc" id="L48">	}</span>
 
 
@@ -95,7 +95,7 @@ public class BusinessLogicServer extends JDialog {
 
 <span class="nc bnc" id="L96" title="All 2 branches missed.">		if (c.isBusinessLogicLocal()) {</span>
 <span class="nc" id="L97">			textArea.append(&quot;\nERROR, the business logic is configured as local&quot;);</span>
-		}
+<span class="nc" id="L98">		}</span>
 		else {
 		try {
 
@@ -110,20 +110,20 @@ public class BusinessLogicServer extends JDialog {
 <span class="nc" id="L110">				Endpoint.publish(service, new BLFacadeImplementation());</span>
 				
 				
-			}
+<span class="nc" id="L113">			}</span>
 <span class="nc" id="L114">			catch (Exception e) {</span>
 <span class="nc" id="L115">				System.out.println(&quot;Error in BusinessLogicServer: &quot;+e.toString());</span>
 <span class="nc" id="L116">				textArea.append(&quot;\nYou should have not launched DBManagerServer...\n&quot;);</span>
 <span class="nc" id="L117">				textArea.append(&quot;\n\nOr maybe there is a BusinessLogicServer already launched...\n&quot;);</span>
 <span class="nc" id="L118">				throw e;</span>
-<span class="nc" id="L119">			}</span>
+			}
 			
 <span class="nc" id="L121">			textArea.append(&quot;Running service at:\n\t&quot; + service);</span>
 <span class="nc" id="L122">			textArea.append(&quot;\n\n\nPress button to exit this server... &quot;);</span>
 			
 <span class="nc" id="L124">		  } catch (Exception e) {</span>
 <span class="nc" id="L125">			textArea.append(e.toString());</span>
-<span class="nc" id="L126">		  }</span>
+		  }
 
 	  }
 <span class="nc" id="L129">	}</span>
