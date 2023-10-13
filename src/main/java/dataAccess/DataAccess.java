@@ -869,7 +869,7 @@ public void open(boolean initializeMode){
 				b=true;
 				for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
 					if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
-						b=false;
+						b=false; 
 					}
 				}
 				if(b) {
