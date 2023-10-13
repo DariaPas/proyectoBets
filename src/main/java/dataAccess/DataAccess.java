@@ -40,7 +40,12 @@ import exceptions.QuoteAlreadyExist;
 public class DataAccess  {
 	protected static EntityManager  db;
 	protected static EntityManagerFactory emf;
-
+	private DataAccessInterface dao;
+	
+	
+	public DataAccess(DataAccessInterface dao) {
+		this.dao=dao;
+	}
 
 	ConfigXML c=ConfigXML.getInstance();
 
@@ -57,6 +62,8 @@ public class DataAccess  {
 	}
 	
 	
+	
+
 	/**
 	 * This is the data access method that initializes the database with some events and questions.
 	 * This method is invoked by the business logic (constructor of BLFacadeImplementation) when the option "initialize" is declared in the tag dataBaseOpenMode of resources/config.xml file
@@ -735,9 +742,9 @@ public void open(boolean initializeMode){
 			Equery.setParameter(1, eventDate);
 			for(Event ev: Equery.getResultList()) {
 				if(ev.getDescription().equals(description)) {
-					b = false;
+					b = false; 
 				}
-			}
+			} 
 			if(b) {
 				String[] taldeak = description.split("-");
 				Team lokala = new Team(taldeak[0]);
@@ -747,7 +754,8 @@ public void open(boolean initializeMode){
 				spo.addEvent(e);
 				db.persist(e);
 			}
-		}else {
+		}
+		else {
 			return false;
 		}
 		db.getTransaction().commit();
@@ -860,7 +868,7 @@ public void open(boolean initializeMode){
 				Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
 				b=true;
 				for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
-					if(apu.getApustuKopia()==apustuAnitza.getApustuKopia()) {
+					if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
 						b=false;
 					}
 				}
