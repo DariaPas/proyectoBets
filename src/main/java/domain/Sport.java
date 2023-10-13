@@ -12,6 +12,8 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlID;
 
+import org.junit.Test;
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @Entity
 public class Sport implements Serializable{
@@ -73,9 +75,17 @@ public class Sport implements Serializable{
 	@Override
 	public boolean equals(Object o) {
 		Sport sp = (Sport) o;
-		if(sp==null) {
-			return false;
-		}
-		return this.izena.equals(sp.getIzena());
+		//if(sp==null) {
+			//return false;
+		//}
+		//return this.izena.equals(sp.getIzena());
+		if (this.izena == sp.getIzena()) {
+		      return true;
+		    }
+		//else if (sp == null || this.getClass() != sp.getClass()) {
+		  //    return false;
+		  //  }
+		return false;
 	}
+	
 }
