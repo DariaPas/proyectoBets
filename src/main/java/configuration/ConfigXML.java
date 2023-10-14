@@ -99,7 +99,7 @@ public class ConfigXML {
 			  
 				
 
-			  dbFilename = getTagValue("dbFilename", config);
+			
 
 				//Two possible values: true (no instance of RemoteServer needs to be launched) or false (RemoteServer needs to be run first)
 			  value= ((Element)config.getElementsByTagName("database").item(0)).getAttribute("local");
@@ -133,7 +133,7 @@ public class ConfigXML {
 	private static String getTagValue(String sTag, Element eElement)
 	 {
 		  NodeList nlList= eElement.getElementsByTagName(sTag).item(0).getChildNodes();
-		  Node nValue = (Node) nlList.item(0);
+		  Node nValue =  nlList.item(0);
 
 		  return nValue.getNodeValue();
 

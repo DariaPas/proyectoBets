@@ -84,7 +84,7 @@ public class DataAccess  {
 		   Team team1= new Team("Atletico");
 		   Team team2= new Team("Athletic");
 		   Team team3= new Team("Eibar");
-		   Team team4= new Team("Barcelona");
+		   Team team4= new Team("Barcelona"); 
 		   Team team5= new Team("Getafe");
 		   Team team6= new Team("Celta");
 		   Team team7= new Team("Alaves");
@@ -150,7 +150,7 @@ public class DataAccess  {
 			
 			Sport sp1=new Sport("Futbol");
 			Sport sp2=new Sport("Baloncesto");
-			Sport sp3=new Sport("Tennis");
+			Sport sp3=new Sport("Tennis"); 
 			
 			sp1.addEvent(ev1);
 			sp1.addEvent(ev2);
@@ -227,20 +227,22 @@ public class DataAccess  {
 			Registered reg4 = new Registered("mikel", "123", 1111);
 									
 			if (Locale.getDefault().equals(new Locale("es"))) {
-				q1=ev1.addQuestion("¿Quién ganará el partido?",1);
+				String q="¿Quién ganará el partido?";
+				q1=ev1.addQuestion(q,1);
 				q2=ev1.addQuestion("¿Quién meterá el primer gol?",2);
-				q3=ev11.addQuestion("¿Quién ganará el partido?",1);
+				q3=ev11.addQuestion(q,1);
 				q4=ev11.addQuestion("¿Cuántos goles se marcarán?",2);
-				q5=ev17.addQuestion("¿Quién ganará el partido?",1);
+				q5=ev17.addQuestion(q,1);
 				q6=ev17.addQuestion("¿Habrá goles en la primera parte?",2);
 				
 			}
 			else if (Locale.getDefault().equals(new Locale("en"))) {
-				q1=ev1.addQuestion("Who will win the match?",1);
+				String q="Who will win the match?";
+				q1=ev1.addQuestion(q,1);
 				q2=ev1.addQuestion("Who will score first?",2);
-				q3=ev11.addQuestion("Who will win the match?",1);
+				q3=ev11.addQuestion(q,1);
 				q4=ev11.addQuestion("How many goals will be scored in the match?",2);
-				q5=ev17.addQuestion("Who will win the match?",1);
+				q5=ev17.addQuestion(q,1);
 				q6=ev17.addQuestion("Will there be goals in the first half?",2);
 				
 			}			
@@ -371,19 +373,19 @@ public class DataAccess  {
 			
 			
 			
+			String a= "ApustuaEgin";
 			
-			
-			Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), "ApustuaEgin");
-			Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), "ApustuaEgin");
+			Transaction t1 = new Transaction(reg1, apA1.getBalioa(), new Date(),a);
+			Transaction t3 = new Transaction(reg2, apA4.getBalioa(), new Date(), a);
+			Transaction t4 = new Transaction(reg3, apA5.getBalioa(), new Date(),a);
+			Transaction t5 = new Transaction(reg4, apA3.getBalioa(), new Date(), a);
+			Transaction t6 = new Transaction(reg4, apA6.getBalioa(), new Date(), a);
+			Transaction t7 = new Transaction(reg1, apA7.getBalioa(), new Date(), a);
+			Transaction t8 = new Transaction(reg1, apA8.getBalioa(), new Date(), a);
+			Transaction t9 = new Transaction(reg2, apA9.getBalioa(), new Date(), a);
+			Transaction t10 = new Transaction(reg2, apA10.getBalioa(), new Date(), a);
+			Transaction t11 = new Transaction(reg3, apA11.getBalioa(), new Date(), a);
+			Transaction t12 = new Transaction(reg3, apA12.getBalioa(), new Date(), a);
 			
 			reg1.addTransaction(t1);
 			reg2.addTransaction(t3);
@@ -735,7 +737,7 @@ public void open(boolean initializeMode){
 	
 	public boolean gertaerakSortu(String description,Date eventDate, String sport) {
 		boolean b = true;
-		db.getTransaction().begin();
+		//db.getTransaction().begin();
 		Sport spo =db.find(Sport.class, sport);
 		if(spo!=null) {
 			TypedQuery<Event> Equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
@@ -758,12 +760,12 @@ public void open(boolean initializeMode){
 		else {
 			return false;
 		}
-		db.getTransaction().commit();
+		//db.getTransaction().commit();
 		return b;
 	}
 	
 	public Quote storeQuote(String forecast, Double Quote, Question question) throws QuoteAlreadyExist {
-		//System.out.println(">> DataAccess: createQuestion=> event= "+event+" question= "+question+" betMinimum="+betMinimum);
+		
 		
 		Question q = db.find(Question.class, question.getQuestionNumber());
 		
