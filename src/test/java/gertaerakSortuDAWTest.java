@@ -34,7 +34,6 @@ import domain.Team;
 import exceptions.EventFinished;
 import exceptions.EventNotFinished;
 import exceptions.QuestionAlreadyExist;
-import test.businessLogic.TestFacadeImplementation;
 import test.dataAccess.TestDataAccess;
 
 public class gertaerakSortuDAWTest {

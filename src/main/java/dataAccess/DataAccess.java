@@ -737,17 +737,16 @@ public void open(boolean initializeMode){
 	
 	public boolean gertaerakSortu(String description,Date eventDate, String sport) {
 		boolean b = true;
-		//db.getTransaction().begin();
-		Sport spo =db.find(Sport.class, sport);
+		Sport spo =db.find(Sport.class, sport); //busca el deporte en la base de datos
 		if(spo!=null) {
 			TypedQuery<Event> Equery = db.createQuery("SELECT e FROM Event e WHERE e.getEventDate() =?1 ",Event.class);
 			Equery.setParameter(1, eventDate);
-			for(Event ev: Equery.getResultList()) {
+			for(Event ev: Equery.getResultList()) { //mira si el evento ya existe
 				if(ev.getDescription().equals(description)) {
 					b = false; 
 				}
 			} 
-			if(b) {
+			if(b) { //crea un nuevo evento
 				String[] taldeak = description.split("-");
 				Team lokala = new Team(taldeak[0]);
 				Team kanpokoa = new Team(taldeak[1]);
@@ -760,7 +759,6 @@ public void open(boolean initializeMode){
 		else {
 			return false;
 		}
-		//db.getTransaction().commit();
 		return b;
 	}
 	

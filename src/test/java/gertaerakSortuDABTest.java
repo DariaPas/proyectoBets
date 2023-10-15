@@ -34,26 +34,20 @@ import domain.Team;
 import exceptions.EventFinished;
 import exceptions.EventNotFinished;
 import exceptions.QuestionAlreadyExist;
-import test.businessLogic.TestFacadeImplementation;
 import test.dataAccess.TestDataAccess;
 
 public class gertaerakSortuDABTest {
-	
 
 	 //sut:system under test
 	 static DataAccess sut=new DataAccess();
-	 
 	 //additional operations needed to execute the test 
 	 static TestDataAccess testDA=new TestDataAccess();
-
 	 private Event ev;
 
-	
 	
 	 @Test
 		//El deporte no existe
 		public void test0() {
-			
 		 	//Crear parametros de evento
 			String description="Athletico-Athletic";		
 			Team t1=new Team("Athletico");
@@ -72,12 +66,10 @@ public class gertaerakSortuDABTest {
 			//Conseguir el resultado del metodo con el sut
 			boolean result = sut.gertaerakSortu(description, date, sport );
 			  assertFalse(result);
-				
 			}
 	 @Test
 	 //El deporte existe
 	 public void test1() {
-		 
 		 //Crear parametros de evento
 			String description="Athletico-Athletic";		
 			Date date=new Date(123,10,1);//01-11-2023

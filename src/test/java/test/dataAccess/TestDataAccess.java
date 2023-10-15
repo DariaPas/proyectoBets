@@ -2,15 +2,18 @@ package test.dataAccess;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 import configuration.ConfigXML;
 import domain.Event;
 import domain.Question;
+import domain.Registered;
 import domain.Sport;
 
 public class TestDataAccess {
@@ -54,42 +57,9 @@ public class TestDataAccess {
 		System.out.println("DataBase closed");
 	}
 
-	public boolean removeEvent(Event ev) {
-		System.out.println(">> DataAccessTest: removeEvent");
-		Event e = db.find(Event.class, ev.getEventNumber());
-		if (e!=null) {
-			db.getTransaction().begin();
-			db.remove(e);
-			db.getTransaction().commit();
-			return true;
-		} else 
-		return false;
-    }
+
 		
-		public Event addEventWithQuestion(String desc, Date d, String question, float qty) {
-			System.out.println(">> DataAccessTest: addEvent");
-			Event ev=null;
-				db.getTransaction().begin();
-				try {
-				    ev=new Event(desc,d, null, null);
-				    ev.addQuestion(question, qty);
-					db.persist(ev);
-					db.getTransaction().commit();
-				}
-				catch (Exception e){
-					e.printStackTrace();
-				}
-				return ev;
-	    }
-		public boolean existQuestion(Event ev,Question q) {
-			System.out.println(">> DataAccessTest: existQuestion");
-			Event e = db.find(Event.class, ev.getEventNumber());
-			if (e!=null) {
-				return e.DoesQuestionExists(q.getQuestion());
-			} else 
-			return false;
-			
-		}
+	
 
 
 		public String findSport(String s) {
@@ -102,6 +72,23 @@ public class TestDataAccess {
 			
 		}
 
+		public boolean removeRegistered(Registered reg) {
+			System.out.println(">> DataAccessTest: removeRegistered");
+			Registered r = db.find(Registered.class, reg.getUsername());
+			if (r!=null) {
+				db.getTransaction().begin();
+				db.remove(r);
+				db.getTransaction().commit();
+				return true;
+			} else 
+			return false;
+		}
+		
+		public List<Registered> getAllRegistered() {
+			TypedQuery<Registered> Rquery = db.createQuery("SELECT r FROM Registered r", Registered.class);
+			List<Registered> listR = Rquery.getResultList();
+			return listR;
+		}
 
 		
 		

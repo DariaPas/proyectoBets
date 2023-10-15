@@ -159,13 +159,13 @@ public class BLFacadeImplementation  implements BLFacade {
     }
     @WebMethod	
     public boolean gertaerakSortu(String description,Date eventDate, String sport) throws EventFinished{
-    	if(new Date().compareTo(eventDate)>0) {
+    	if(new Date().compareTo(eventDate)>0) {//mira si la fecha es anterior a la actual
 			throw new EventFinished("Gertaera honen data dagoeneko pasa da");
     	}
     	dbManager.open(false);
     	boolean b = dbManager.gertaerakSortu(description, eventDate, sport);
     	dbManager.close();
-    	return b;
+    	return b; 
     }
     @WebMethod	
     public void storeQuote(String forecast, Double Quote, Question question) throws QuoteAlreadyExist {

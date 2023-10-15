@@ -39,7 +39,7 @@ public class gertaerakSortuBLBMTest {
 		assertThrows(EventFinished.class, ()->  
 		sut.gertaerakSortu(desc, d, sport));
 						
-	}
+	} 
 
 
 	@SuppressWarnings("deprecation")
@@ -55,7 +55,7 @@ public class gertaerakSortuBLBMTest {
 		Mockito.doReturn(false).when(dao).gertaerakSortu(desc,d,sport);
 		
 			boolean result = sut.gertaerakSortu(desc, d, sport);
-			assertFalse(result);
+			assertFalse(result); 
 		} catch (EventFinished e) {
 			e.printStackTrace();
 		}
