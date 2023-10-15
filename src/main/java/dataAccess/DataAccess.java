@@ -922,7 +922,6 @@ public void open(boolean initializeMode){
 	}
 	
 	public List<Transaction> findTransakzioak(Registered u){
-		Registered user = (Registered) db.find(Registered.class, u.getUsername()); 
 		TypedQuery<Transaction> Tquery = db.createQuery("SELECT t FROM Transaction t WHERE t.getErabiltzailea().getUsername() =?1 ", Transaction.class);
 		Tquery.setParameter(1, u.getUsername());
 		return Tquery.getResultList();

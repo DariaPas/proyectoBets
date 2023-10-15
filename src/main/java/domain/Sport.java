@@ -75,15 +75,14 @@ public class Sport implements Serializable{
 	@Override
 	public boolean equals(Object o) {
 		Sport sp = (Sport) o;
-		if(sp==null) {
+		if(sp==null || this.getClass() != o.getClass()) {
 			return false;
 		}
 		return this.izena.equals(sp.getIzena());
 	}
 	@Override
-	  public int hashCode() {
-		return 0;
-	   
-	  }
+    public int hashCode() {
+        return 1;
+    }
 	
 }

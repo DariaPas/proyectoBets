@@ -36,7 +36,7 @@ public class CreateQuestionDAW {
 			//define paramaters
 			String eventText="event1";
 			String queryText="query1";
-			Float betMinimum=new Float(2);
+			Float betMinimum=new Float(2); 
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			Date oneDate=null;;

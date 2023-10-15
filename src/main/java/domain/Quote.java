@@ -108,13 +108,17 @@ public class Quote implements Serializable{
 	
 	@Override
 	public boolean equals(Object o) {
-		if(o != null) {
+		if(o != null || this.getClass() != o.getClass()) {
 			Quote q = (Quote)o;
 			return this.getQuoteNumber()==q.getQuoteNumber();
 		} else {
 			return false;
 		}
 	}
+	@Override
+    public int hashCode() {
+        return 1;
+    }
 	
 	
 }

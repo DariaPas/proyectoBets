@@ -70,6 +70,6 @@ public interface DataAccessInterface {
 	 */
 	boolean existQuestion(Event event, String question);
 
-	
+	boolean gertaerakSortu(String description,Date eventDate, String sport);
 
 }

@@ -11,6 +11,7 @@ import javax.persistence.Persistence;
 import configuration.ConfigXML;
 import domain.Event;
 import domain.Question;
+import domain.Sport;
 
 public class TestDataAccess {
 	protected  EntityManager  db;
@@ -89,5 +90,20 @@ public class TestDataAccess {
 			return false;
 			
 		}
+
+
+		public String findSport(String s) {
+			Sport spo =db.find(Sport.class, s);
+			//Sport sp=new Sport("Futbol");
+			if(spo!=null) {
+				return spo.toString();
+			}else
+				return s;
+			
+		}
+
+
+		
+		
 }
 
