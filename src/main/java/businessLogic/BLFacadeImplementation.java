@@ -133,7 +133,7 @@ public class BLFacadeImplementation  implements BLFacade {
     @WebMethod	
 	 public void initializeBD(){
     	dbManager.open(false);
-		dbManager.initializeDB();
+		dbManager.initializeDB(); 
 		dbManager.close();
 	}
     @WebMethod	
