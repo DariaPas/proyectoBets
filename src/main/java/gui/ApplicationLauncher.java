@@ -10,6 +10,7 @@ import javax.xml.ws.Service;
 
 import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;
+import businessLogic.BLFactory;
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
 
@@ -18,6 +19,7 @@ public class ApplicationLauncher {
 	
 	
 	public static void main(String[] args) {
+		
 
 		ConfigXML c=ConfigXML.getInstance();
 	
@@ -32,9 +34,13 @@ public class ApplicationLauncher {
 		
 		MainUserGUI b = new MainUserGUI(); 
 		b.setVisible(true);
+		int isLocal= 1;
+		BLFacade	blFacade =	new BLFactory().getBusinessLogicFactory(isLocal);
+		MainGUI.setBussinessLogic(blFacade);
 
-
-		try {
+	/*	try {
+			
+			
 			
 			BLFacade appFacadeInterface;
 //			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
@@ -70,11 +76,11 @@ public class ApplicationLauncher {
 		        Service service = Service.create(url, qname);
 
 		         appFacadeInterface = service.getPort(BLFacade.class);
-			} 
+			} */
 			/*if (c.getDataBaseOpenMode().equals("initialize")) 
 				appFacadeInterface.initializeBD();
-				*/
-			MainGUI.setBussinessLogic(appFacadeInterface);
+				
+			MainGUI.setBussinessLogic(blFacade);
 
 		
 
@@ -87,7 +93,7 @@ public class ApplicationLauncher {
 		}
 		//a.pack();
 
-
+*/
 	}
 
 }

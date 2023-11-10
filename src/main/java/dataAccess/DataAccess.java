@@ -247,11 +247,12 @@ public class DataAccess  {
 				
 			}			
 			else {
-				q1=ev1.addQuestion("Zeinek irabaziko du partidua?",1);
+				String temp = "Zeinek irabaziko du partidua?";
+				q1=ev1.addQuestion(temp,1);
 				q2=ev1.addQuestion("Zeinek sartuko du lehenengo gola?",2);
-				q3=ev11.addQuestion("Zeinek irabaziko du partidua?",1);
+				q3=ev11.addQuestion(temp,1);
 				q4=ev11.addQuestion("Zenbat gol sartuko dira?",2);
-				q5=ev17.addQuestion("Zeinek irabaziko du partidua?",1);
+				q5=ev17.addQuestion(temp,1);
 				q6=ev17.addQuestion("Golak sartuko dira lehenengo zatian?",2);
 				
 				
@@ -598,13 +599,15 @@ public class DataAccess  {
 			db.persist(t12);
 			
 			
+		
+			db.flush();
+		//	db.getTransaction().commit();
 			
-			db.getTransaction().commit();
-			
-			this.DiruaSartu(reg1, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg2, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg3, 50.0, new Date(), "DiruaSartu");
-			this.DiruaSartu(reg4, 50.0, new Date(), "DiruaSartu");
+			String tipo = "DiruaSartu";
+			this.DiruaSartu(reg1, 50.0, new Date(), tipo);
+			this.DiruaSartu(reg2, 50.0, new Date(), tipo);
+			this.DiruaSartu(reg3, 50.0, new Date(), tipo);
+			this.DiruaSartu(reg4, 50.0, new Date(), tipo);
 			
 			System.out.println("Db initialized");
 		}
@@ -629,7 +632,7 @@ public class DataAccess  {
 			
 			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 			
-			db.getTransaction().begin();
+			//db.getTransaction().begin();
 			Question q = ev.addQuestion(question, betMinimum);
 			//db.persist(q);
 			db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
@@ -850,41 +853,53 @@ public void open(boolean initializeMode){
 			if(apustuBikoitzaGalarazi==-1) {
 				apustuBikoitzaGalarazi=apustuAnitza.getApustuAnitzaNumber();
 			}
-			apustuAnitza.setApustuKopia(apustuBikoitzaGalarazi);
-			user.updateDiruKontua(-balioa);
-			Transaction t = new Transaction(user, balioa, new Date(), "ApustuaEgin"); 
-			user.addApustuAnitza(apustuAnitza);
-			for(Apustua a: apustuAnitza.getApustuak()) {
-				Apustua apu = db.find(Apustua.class, a.getApostuaNumber());
-				Quote q = db.find(Quote.class, apu.getKuota().getQuoteNumber());
-				Sport spo =q.getQuestion().getEvent().getSport();
-				spo.setApustuKantitatea(spo.getApustuKantitatea()+1);
-				
-			}
+			Transaction t = extracted1(balioa, apustuBikoitzaGalarazi, user, apustuAnitza);
 			user.addTransaction(t);
 			db.persist(t);
 			db.getTransaction().commit();
-			for(Jarraitzailea reg:user.getJarraitzaileLista()) {
-				Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
-				b=true;
-				for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
-					if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
-						b=false; 
-					}
-				}
-				if(b) {
-					if(erab.getNork().getDiruLimitea()<balioa) {
-						this.ApustuaEgin(erab.getNork(), quote, erab.getNork().getDiruLimitea(), apustuBikoitzaGalarazi);
-					}else{
-						this.ApustuaEgin(erab.getNork(), quote, balioa, apustuBikoitzaGalarazi);
-					}
-				}
-			}
+			extracted2(quote, balioa, apustuBikoitzaGalarazi, user, apustuAnitza);
 			return true; 
 		}else{
 			return false; 
 		}
 		
+	}
+
+	private void extracted2(Vector<Quote> quote, Double balioa, Integer apustuBikoitzaGalarazi, Registered user,
+			ApustuAnitza apustuAnitza) {
+		Boolean b;
+		for(Jarraitzailea reg:user.getJarraitzaileLista()) {
+			Jarraitzailea erab=db.find(Jarraitzailea.class, reg.getJarraitzaileaNumber());
+			b=true;
+			for(ApustuAnitza apu: erab.getNork().getApustuAnitzak()) {
+				if(apu.getApustuKopia().equals(apustuAnitza.getApustuKopia())) {
+					b=false; 
+				}
+			}
+			if(b) {
+				if(erab.getNork().getDiruLimitea()<balioa) {
+					this.ApustuaEgin(erab.getNork(), quote, erab.getNork().getDiruLimitea(), apustuBikoitzaGalarazi);
+				}else{
+					this.ApustuaEgin(erab.getNork(), quote, balioa, apustuBikoitzaGalarazi);
+				}
+			}
+		}
+	}
+
+	private Transaction extracted1(Double balioa, Integer apustuBikoitzaGalarazi, Registered user,
+			ApustuAnitza apustuAnitza) {
+		apustuAnitza.setApustuKopia(apustuBikoitzaGalarazi);
+		user.updateDiruKontua(-balioa);
+		Transaction t = new Transaction(user, balioa, new Date(), "ApustuaEgin"); 
+		user.addApustuAnitza(apustuAnitza);
+		for(Apustua a: apustuAnitza.getApustuak()) {
+			Apustua apu = db.find(Apustua.class, a.getApostuaNumber());
+			Quote q = db.find(Quote.class, apu.getKuota().getQuoteNumber());
+			Sport spo =q.getQuestion().getEvent().getSport();
+			spo.setApustuKantitatea(spo.getApustuKantitatea()+1);
+			
+		}
+		return t;
 	}
 	
 	public void apustuaEzabatu(Registered user1, ApustuAnitza ap) {
