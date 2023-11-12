@@ -2,6 +2,9 @@ package gui;
 
 import java.awt.Color;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import javax.swing.UIManager;
@@ -11,7 +14,9 @@ import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;
 import businessLogic.BLFactory;
 import configuration.ConfigXML;
+import configuration.ExtendedIterator;
 import dataAccess.DataAccess;
+import domain.Event;
 
 public class ApplicationLauncher { 
 	
@@ -37,62 +42,32 @@ public class ApplicationLauncher {
 		BLFacade	blFacade =	new BLFactory().getBusinessLogicFactory(isLocal);
 		MainGUI.setBussinessLogic(blFacade);
 
-	/*	try {
-			
-			
-			
-			BLFacade appFacadeInterface;
-//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
-//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-			UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-			
-			if (c.isBusinessLogicLocal()) {
-				
-				//In this option the DataAccess is created by FacadeImplementationWS
-				//appFacadeInterface=new BLFacadeImplementation();
-
-				//In this option, you can parameterize the DataAccess (e.g. a Mock DataAccess object)
-
-				DataAccess da= new DataAccess(c.getDataBaseOpenMode().equals("initialize"));
-				appFacadeInterface=new BLFacadeImplementation(da);
-
-				
-			}
-			
-			else { //If remote
-				
-				 String serviceName= "http://"+c.getBusinessLogicNode() +":"+ c.getBusinessLogicPort()+"/ws/"+c.getBusinessLogicName()+"?wsdl";
-				 
-				//URL url = new URL("http://localhost:9999/ws/ruralHouses?wsdl");
-				URL url = new URL(serviceName);
-
-		 
-		        //1st argument refers to wsdl document above
-				//2nd argument is service name, refer to wsdl document above
-//		        QName qname = new QName("http://businessLogic/", "FacadeImplementationWSService");
-		        QName qname = new QName("http://businessLogic/", "BLFacadeImplementationService");
-		 
-		        Service service = Service.create(url, qname);
-
-		         appFacadeInterface = service.getPort(BLFacade.class);
-			} */
-			/*if (c.getDataBaseOpenMode().equals("initialize")) 
-				appFacadeInterface.initializeBD();
-				
-			MainGUI.setBussinessLogic(blFacade);
-
-		
-
-			
-		}catch (Exception e) {
-			a.jLabelSelectOption.setText("Error: "+e.toString());
-			a.jLabelSelectOption.setForeground(Color.RED);	
-			
-			System.out.println("Error in ApplicationLauncher: "+e.toString());
+		SimpleDateFormat	sdf =	new SimpleDateFormat("dd/MM/yyyy");
+		Date	date;
+		try {
+		date =	sdf.parse("17/11/2023"); //	17	del	mes	que	viene
+		ExtendedIterator<Event>	i =	blFacade.getEventsIterator(date);
+		Event	e;
+		System.out.println("_____________________");
+		System.out.println("RECORRIDO	HACIA	ATRÁS");
+		i.goLast();
+		//	Hacia atrás
+		while (i.hasPrevious())	{
+		e =	i.previous();
+		System.out.println(e.toString());
 		}
-		//a.pack();
-
-*/
+		System.out.println();
+		System.out.println("_____________________");
+		System.out.println("RECORRIDO	HACIA	ADELANTE");
+		i.goFirst();	//	Hacia adelante
+		while (i.hasNext())	{
+		e =	i.next();
+		System.out.println(e.toString());
+		}
+		}	catch (ParseException	e1)	{
+		System.out.println("Problems	with	date??	" +	"17/12/2020");
+		}
 	}
+	
 
 }

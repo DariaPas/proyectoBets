@@ -35,9 +35,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="D:/UPV/Databases/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33/mysql-connector-j-8.0.33.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Владелец/git/Bets2021/src/main/resources/jcalendar-1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Владелец/git/Bets2021/src/main/resources/objectdb.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Владелец/git/Bets2021/src/main/resources/objenesis-tck-3.0.1.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/objectdb.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/objenesis-tck-3.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

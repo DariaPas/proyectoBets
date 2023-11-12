@@ -1,5 +1,7 @@
 package businessLogic;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 //hola
 import java.util.Date;
 import java.util.List;
@@ -10,6 +12,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import configuration.ConfigXML;
+import configuration.ExtendedIterator;
 import dataAccess.DataAccess;
 import domain.ApustuAnitza;
 import domain.Apustua;
@@ -18,6 +21,7 @@ import domain.Question;
 import domain.Quote;
 import domain.Registered;
 import domain.Sport;
+import configuration.ExtendedIteratorEvents;
 import domain.Team;
 import domain.Transaction;
 import exceptions.EventFinished;
@@ -379,5 +383,20 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		return team;
 	}
-}
 
+	@Override
+	public ExtendedIterator<Event> getEventsIterator(Date date) {		
+		Vector<Event> events=this.getEvents(date);
+		return new ExtendedIteratorEvents(events);
+	}
+}
+/*
+ *   List<Object> list = new ArrayList<>();
+	      it.goLast();
+	      while (it.hasPrevious()) {
+	    	  Symptom s= (Symptom)it.previous();
+	          list.add(s);
+	      }
+
+	      Collections.sort(list, comparator);
+	      return list.iterator();*/

@@ -8,6 +8,7 @@ import java.util.Vector;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+import configuration.ExtendedIterator;
 import domain.ApustuAnitza;
 import domain.Apustua;
 import domain.Event; 
@@ -128,4 +129,6 @@ public interface BLFacade  {
 	@WebMethod public Team findTeam(Registered u);
 	
 	@WebMethod public Sport findSport(Event q);
+	
+	@WebMethod public	ExtendedIterator<Event>	getEventsIterator(Date	date);
 }
