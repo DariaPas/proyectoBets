@@ -390,13 +390,3 @@ public class BLFacadeImplementation  implements BLFacade {
 		return new ExtendedIteratorEvents(events);
 	}
 }
-/*
- *   List<Object> list = new ArrayList<>();
-	      it.goLast();
-	      while (it.hasPrevious()) {
-	    	  Symptom s= (Symptom)it.previous();
-	          list.add(s);
-	      }
-
-	      Collections.sort(list, comparator);
-	      return list.iterator();*/
