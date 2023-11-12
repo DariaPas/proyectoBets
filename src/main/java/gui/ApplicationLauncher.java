@@ -6,7 +6,6 @@ import java.util.Locale;
 
 import javax.swing.UIManager;
 import javax.xml.namespace.QName;
-import javax.xml.ws.Service;
 
 import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;

@@ -53,6 +53,7 @@ public class RegisteredGUI extends JFrame {
 	private JButton btnNewButton;
 	private JButton btnRank;
 	private JButton btnDestacados;
+	private JButton windowtablebtn;
 	
 	/**
 	 * This is the default constructor
@@ -111,6 +112,7 @@ public class RegisteredGUI extends JFrame {
 			jContentPane.add(getJButtonDesLogin());
 			jContentPane.add(getBtnRank());
 			jContentPane.add(getBtnDestacados());
+			jContentPane.add(getWindowTablebtn());
 		}
 		return jContentPane;
 	}
@@ -120,6 +122,25 @@ public class RegisteredGUI extends JFrame {
 	 * 
 	 * @return javax.swing.JButton
 	 */
+	private JButton getWindowTablebtn() {
+		if(windowtablebtn == null) {
+			windowtablebtn = new JButton();
+			windowtablebtn.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			windowtablebtn.setForeground(Color.DARK_GRAY);
+			windowtablebtn.setBackground(Color.PINK);
+			windowtablebtn.setText("Window Table");
+			windowtablebtn.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					JFrame a = new WindowTable(user); 
+					a.setVisible(true);
+				}
+			});
+				windowtablebtn.setBounds(10, 391, 282, 68);
+			}
+		return windowtablebtn;
+			
+	}
+	
 	private JButton getBoton3() {
 		if (jButtonQueryQueries == null) {
 			jButtonQueryQueries = new JButton();
